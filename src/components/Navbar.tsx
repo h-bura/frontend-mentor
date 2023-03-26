@@ -11,11 +11,20 @@ function Navbar() {
         <Spacer />
         <HStack as="b" spacing="10" fontSize="14">
           {HEADER_ITEMS.map((item) => (
-            <Text key={item} fontSize="18px">
+            <Text
+              key={item}
+              fontSize="18px"
+              cursor="pointer "
+              _hover={{ textDecoration: "underline red 25%" }}
+            >
               {item}
             </Text>
           ))}
-          <Text fontSize="18px">
+          <Text
+            fontSize="18px"
+            cursor="pointer "
+            _hover={{ textDecoration: "underline red 25%" }}
+          >
             UNLOCK
             <span
               style={{
