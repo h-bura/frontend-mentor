@@ -12,7 +12,7 @@ import React from "react";
 import image4 from "../image/image4.jpg";
 function Challange4() {
   return (
-    <Card maxW="sm">
+    <Card w="100%">
       <CardBody>
         <Image src={image4} borderRadius="lg" _hover={{ cursor: "pointer" }} />
         <span

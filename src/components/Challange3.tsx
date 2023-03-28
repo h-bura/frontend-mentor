@@ -12,7 +12,7 @@ import React from "react";
 import image3 from "../image/image3.jpg";
 function Challange3() {
   return (
-    <Card maxW="sm">
+    <Card w="100%">
       <CardBody>
         <Image
           src={image3}
@@ -21,74 +21,87 @@ function Challange3() {
             cursor: "pointer",
           }}
         />
-        <span
-          style={{
-            display: "flex",
-            position: "relative",
-            bottom: "220px",
-            left: "220px",
-            fontWeight: "bold",
-            color: "white",
-            backgroundColor: "rgb(62, 84, 163)",
-            borderRadius: "5rem",
-            marginRight: "50px",
-            width: "85px",
-            height: "26px",
-            fontSize: "14px",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
+        <Text
+          display="inline-flex"
+          position="relative"
+          bottom="320px"
+          left="310px"
+          color="white"
+          backgroundColor="rgb(62, 84, 163)"
+          borderRadius="5rem"
+          fontSize="20px"
+          justifyContent="center"
+          alignItems="center"
+          width="120px"
+          p="3px 7px"
+          fontWeight="bold"
         >
           PREMIUM
-        </span>
+        </Text>
         <Stack mt="6" spacing="3">
           <Heading
-            size="md"
+            fontSize="32px"
             as="button"
             _hover={{ textDecoration: "underline" }}
             textAlign="start"
+            fontWeight="400px"
           >
             Dictionary web app
           </Heading>
-          <List display="inline-flex" gap="10px">
-            <ListItem color="rgb(106, 190, 205)" as="b">
+          <List display="inline-flex" gap="10px" pt="10px" fontSize="22px">
+            <ListItem color="rgb(106, 190, 205)" fontWeight="bold">
               HTML
             </ListItem>
-            <ListItem color="rgb(62, 84, 163)" as="b">
+            <ListItem color="rgb(62, 84, 163)" fontWeight="bold">
               CSS
             </ListItem>
-            <ListItem color="rgb(207, 99, 144)" as="b">
+            <ListItem color="rgb(207, 99, 144)" fontWeight="bold">
               JS
             </ListItem>
-            <ListItem color="rgb(170, 215, 66)" as="b">
+            <ListItem color="rgb(170, 215, 66)" fontWeight="bold">
               API
             </ListItem>
-          </List>
-          <Text
-            border="1px solid  rgb(241, 182, 4)"
-            width="200px"
-            borderRadius="5px"
-            color="rgb(241, 182, 4)"
-            as="b"
-          >
-            <span
-              style={{
-                display: "inline-flex",
-                backgroundColor: "rgb(241, 182, 4)",
-                color: "white",
-                width: "40px",
-                height: "26px",
-                textAlign: "center",
-                justifyContent: "center",
-                borderTopLeftRadius: "5px",
-                borderBottomLeftRadius: "5px",
-              }}
+            <ListItem
+              display="inline-flex"
+              border="1px solid rgb(241, 182, 4)"
+              width="100%"
+              height="30px"
+              borderRadius="5px"
+              color="rgb(241, 182, 4)"
+              fontWeight="bold"
+              flexDirection="row"
+              mr="7px"
+              ml="15px"
             >
-              3
-            </span>
-            INTERMEDIATE
-          </Text>
-          <Text>
+              <span
+                style={{
+                  display: "inline-flex",
+                  backgroundColor: "rgb(241, 182, 4)",
+                  color: "white",
+                  width: "30px",
+                  textAlign: "center",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  borderTopLeftRadius: "5px",
+                  borderBottomLeftRadius: "5px",
+                  fontSize: "17px",
+                }}
+              >
+                3
+              </span>
+              <span
+                style={{
+                  fontSize: "17px",
+                  paddingLeft: "15px",
+                  paddingRight: "15px",
+                }}
+              >
+                INTERMEDIATE
+              </span>
+            </ListItem>
+          </List>
+
+          <Text fontSize="22px" fontWeight="400px" pt="15px">
             In this project, you'll integrate with the Dictionary API to create
             a real-world dictionary web app. Additional tests include colour
             themes and font selection.

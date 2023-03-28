@@ -14,7 +14,7 @@ import image6 from "../image/image6.jpg";
 
 function Challange6() {
   return (
-    <Card maxW="sm">
+    <Card w="100%">
       <CardBody>
         <Image src={image6} borderRadius="lg" _hover={{ cursor: "pointer" }} />
         <span

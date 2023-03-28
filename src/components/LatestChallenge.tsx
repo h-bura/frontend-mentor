@@ -11,42 +11,43 @@ function LatestChallenge() {
   return (
     <>
       <Box
-        min-width="1024px"
         height="500px"
         bg="rgb(62, 84, 163 )"
         mt="100px"
         mx="50px"
         borderRadius="10px"
       >
-        <Center pt="60px" fontSize="30px" as="b" color="white">
+        <Center pt="60px" fontSize="22px" fontWeight="bold" color="white">
           LATEST CHALLENGE
         </Center>
       </Box>
       <Center>
         <Grid
+          width="100%"
+          border="1px solid red"
           templateColumns="repeat(3, 1fr)"
           templateRows="repeat(2, 1fr)"
-          gap={10}
-          mx="50px"
+          gap={8}
+          mx="100px"
           position="relative"
-          bottom="250px"
+          bottom="330px"
         >
-          <GridItem w="400px" h="650px" borderRadius="20px">
+          <GridItem w="100%" h="700px" borderRadius="20px">
             <Challange1 />
           </GridItem>
-          <GridItem w="400px" h="650px" borderRadius="20px">
+          <GridItem w="100%" h="700px" borderRadius="20px">
             <Challange2 />
           </GridItem>
-          <GridItem w="400px" h="650px" borderRadius="20px">
+          <GridItem w="100%" h="700px" borderRadius="20px">
             <Challange3 />
           </GridItem>
-          <GridItem w="400px" h="650px" borderRadius="20px">
+          <GridItem w="100%" h="700px" borderRadius="20px">
             <Challange4 />
           </GridItem>
-          <GridItem w="400px" h="650px" borderRadius="20px">
+          <GridItem w="100%" h="700px" borderRadius="20px">
             <Challange5 />
           </GridItem>
-          <GridItem w="400px" h="650px" borderRadius="20px">
+          <GridItem w="100%" h="700px" borderRadius="20px">
             <Challange6 />
           </GridItem>
         </Grid>
