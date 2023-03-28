@@ -12,7 +12,7 @@ import React from "react";
 import image3 from "../image/image3.jpg";
 function Challange3() {
   return (
-    <Card w="100%">
+    <Card w="100%" h="750px">
       <CardBody>
         <Image
           src={image3}
@@ -70,7 +70,7 @@ function Challange3() {
               color="rgb(241, 182, 4)"
               fontWeight="bold"
               flexDirection="row"
-              mr="7px"
+              mr="15px"
               ml="15px"
             >
               <span
@@ -101,7 +101,12 @@ function Challange3() {
             </ListItem>
           </List>
 
-          <Text fontSize="22px" fontWeight="400px" pt="15px">
+          <Text
+            fontSize="22px"
+            fontWeight="400px"
+            pt="15px"
+            color="rgb(115, 115, 115)"
+          >
             In this project, you'll integrate with the Dictionary API to create
             a real-world dictionary web app. Additional tests include colour
             themes and font selection.

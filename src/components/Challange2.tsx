@@ -12,7 +12,7 @@ import React from "react";
 import image2 from "../image/image2.jpg";
 function Challange2() {
   return (
-    <Card w="100%">
+    <Card w="100%" h="750px">
       <CardBody>
         <Image src={image2} borderRadius="lg" _hover={{ cursor: "pointer" }} />
         <Text
@@ -20,8 +20,8 @@ function Challange2() {
           position="relative"
           bottom="320px"
           left="310px"
-          color="white"
-          backgroundColor="rgb(62, 84, 163)"
+          color="rgb(62, 84, 163)"
+          backgroundColor="rgb(231, 235, 249)"
           borderRadius="5rem"
           fontSize="20px"
           justifyContent="center"
@@ -52,6 +52,7 @@ function Challange2() {
             <ListItem
               display="inline-flex"
               ml="170px"
+              mr="15px"
               border="1px solid rgb(106, 190, 205)"
               width="100%"
               height="30px"
@@ -87,7 +88,12 @@ function Challange2() {
               </span>
             </ListItem>
           </List>
-          <Text fontSize="22px" fontWeight="400px" pt="15px">
+          <Text
+            fontSize="22px"
+            fontWeight="400px"
+            pt="15px"
+            color="rgb(115, 115, 115)"
+          >
             This challenge has something for everyone. It's a HTML and CSS only
             project, but we've also provided a JSON file of the test results for
             anyone wanting to practice JS.

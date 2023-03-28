@@ -1,10 +1,11 @@
 import * as React from "react";
-import { ChakraProvider, theme } from "@chakra-ui/react";
+import { Button, Center, ChakraProvider, Text, theme } from "@chakra-ui/react";
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import HowItWork from "./components/HowItWork/HowItWork";
 import LatestChallenge from "./components/LatestChallenge";
 import Menu from "./components/Menu";
+import Slack from "./components/Slack";
 export const App = () => (
   <ChakraProvider theme={theme}>
     <Header />
@@ -12,5 +13,18 @@ export const App = () => (
     <Menu />
     <HowItWork />
     <LatestChallenge />
+    <Center mt="20px">
+      <Button
+        textAlign="center"
+        textDecoration="underline red"
+        fontSize="25px"
+        bg="white"
+        _hover={{ textDecoration: "none" }}
+        mt="10px"
+      >
+        View all challenges
+      </Button>
+    </Center>
+    <Slack />
   </ChakraProvider>
 );
