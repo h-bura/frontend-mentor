@@ -14,7 +14,7 @@ function Slack() {
     <Box
       mt="160px"
       mx="90px"
-      bgColor="#4c68aa"
+      bgColor="#5161B0"
       color="white"
       border="1px solid red"
       h="750px"

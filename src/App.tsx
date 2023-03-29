@@ -6,6 +6,7 @@ import HowItWork from "./components/HowItWork/HowItWork";
 import LatestChallenge from "./components/LatestChallenge";
 import Menu from "./components/Menu";
 import Slack from "./components/Slack";
+import Footer from "./components/Footer";
 export const App = () => (
   <ChakraProvider theme={theme}>
     <Header />
@@ -26,5 +27,6 @@ export const App = () => (
       </Button>
     </Center>
     <Slack />
+    <Footer />
   </ChakraProvider>
 );

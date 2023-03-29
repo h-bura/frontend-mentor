@@ -1,4 +1,4 @@
-import { VStack, HStack, Heading } from "@chakra-ui/react";
+import { VStack, HStack, Heading, Flex } from "@chakra-ui/react";
 import React from "react";
 import { HiArrowDownTray } from "react-icons/hi2";
 import { FaLaptopCode, FaRegComments } from "react-icons/fa";
@@ -35,9 +35,10 @@ function HowItWork() {
   return (
     <>
       <VStack p="4" marginTop="270px">
-        <Heading fontSize="20px">HOW IT WORKS</Heading>
-
-        <HStack spacing="10" paddingTop="70px">
+        <Heading fontSize="20px" mb="100px">
+          HOW IT WORKS
+        </Heading>
+        <Flex>
           {ITEMS.map((item) => (
             <ItemCard
               Icon={item.icon}
@@ -45,7 +46,7 @@ function HowItWork() {
               description={item.description}
             />
           ))}
-        </HStack>
+        </Flex>
       </VStack>
     </>
   );
