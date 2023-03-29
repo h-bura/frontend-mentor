@@ -10,6 +10,13 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import image1 from "../image/image1.jpg";
+//image:any ,
+//price:string,
+//title:string,
+//techs:string[],
+//level:number,
+//LevelText:string,
+//description:string
 function Challange1() {
   return (
     <Card w="100%" h="750px">

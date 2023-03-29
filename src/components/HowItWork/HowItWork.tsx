@@ -1,4 +1,4 @@
-import { VStack, HStack, Heading, Flex } from "@chakra-ui/react";
+import { VStack, Heading, Flex } from "@chakra-ui/react";
 import React from "react";
 import { HiArrowDownTray } from "react-icons/hi2";
 import { FaLaptopCode, FaRegComments } from "react-icons/fa";

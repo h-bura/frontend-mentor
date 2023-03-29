@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Button, Center, ChakraProvider, Text, theme } from "@chakra-ui/react";
+import { Button, Center, ChakraProvider, theme } from "@chakra-ui/react";
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import HowItWork from "./components/HowItWork/HowItWork";
