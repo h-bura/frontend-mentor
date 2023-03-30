@@ -1,4 +1,4 @@
-import { Box, Center, Flex } from "@chakra-ui/react";
+import { Box, Button, Center, Flex } from "@chakra-ui/react";
 import React from "react";
 
 import ChallangeCard from "./LatestChallanges/ChallangeCard";
@@ -31,6 +31,18 @@ function LatestChallenge() {
             />
           ))}
         </Flex>
+      </Center>
+      <Center mt="20px">
+        <Button
+          textAlign="center"
+          textDecoration="underline red"
+          fontSize="25px"
+          bg="white"
+          _hover={{ textDecoration: "none" }}
+          mt="10px"
+        >
+          View all challenges
+        </Button>
       </Center>
     </>
   );

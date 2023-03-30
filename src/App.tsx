@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Button, Center, ChakraProvider, theme } from "@chakra-ui/react";
+import { ChakraProvider, theme } from "@chakra-ui/react";
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import HowItWork from "./components/HowItWork/HowItWork";
@@ -14,18 +14,6 @@ export const App = () => (
     <Menu />
     <HowItWork />
     <LatestChallenge />
-    <Center mt="20px">
-      <Button
-        textAlign="center"
-        textDecoration="underline red"
-        fontSize="25px"
-        bg="white"
-        _hover={{ textDecoration: "none" }}
-        mt="10px"
-      >
-        View all challenges
-      </Button>
-    </Center>
     <Slack />
     <Footer />
   </ChakraProvider>
