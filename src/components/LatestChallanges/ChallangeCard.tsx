@@ -1,9 +1,7 @@
 import {
   Box,
-  Button,
   Card,
   CardBody,
-  Center,
   Heading,
   Image,
   List,

@@ -16,7 +16,6 @@ function Slack() {
       mx="90px"
       bgColor="#5161B0"
       color="white"
-      border="1px solid red"
       h="750px"
       borderRadius="15px"
     >
@@ -36,7 +35,6 @@ function Slack() {
           color="grey"
           w="600px"
           bgColor="white"
-          border="1px solid yellow"
           h="60px"
           placeholder="email@example.com"
         />
