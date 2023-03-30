@@ -1,10 +1,12 @@
 import {
+  Box,
   Card,
   CardBody,
   Heading,
   Image,
   List,
   ListItem,
+  Spacer,
   Stack,
   Text,
 } from "@chakra-ui/react";
@@ -31,7 +33,7 @@ const LEVEL_COLORS = [
   "rgb(244, 137, 37)",
 ];
 
-const LEVEL_EXPLAIN = ["NEWBIE", "JUNIOR", "INTERMEDIATE", "ADVANCED"];
+const LEVEL_TEXT = ["NEWBIE", "JUNIOR", "INTERMEDIATE", "ADVANCED"];
 function ChallangeCard({
   image,
   price,
@@ -73,14 +75,44 @@ function ChallangeCard({
           >
             {title}
           </Heading>
-          <List display="inline-flex" gap="10px" pt="10px" fontSize="22px">
-            {techs.map((item, index) => (
-              <ListItem color={TECH_COLORS[index]} fontWeight="bold">
-                {item}
+          <Box display="inline-flex" pt="10px">
+            <List display="inline-flex" gap="10px" fontSize="22px">
+              {techs.map((item, index) => (
+                <ListItem color={TECH_COLORS[index]} fontWeight="bold">
+                  {item}
+                </ListItem>
+              ))}
+            </List>
+            <Spacer />
+            <List display="flex">
+              <ListItem
+                bg={LEVEL_COLORS[level - 1]}
+                color="white"
+                fontWeight="bold"
+                fontSize="18px"
+                w="30px"
+                borderLeftRadius="7px"
+                textAlign="center"
+                h="100%"
+              >
+                {level}
               </ListItem>
-            ))}
-          </List>
-          <Text>{level}</Text>
+
+              <ListItem
+                fontSize="18px"
+                border={"1px solid"}
+                borderColor={LEVEL_COLORS[level - 1]}
+                fontWeight="bold"
+                color={LEVEL_COLORS[level - 1]}
+                borderRightRadius="7px"
+                justifyContent="center"
+                px="15px"
+                h="100%"
+              >
+                {LEVEL_TEXT[level - 1]}
+              </ListItem>
+            </List>
+          </Box>
           <Text
             fontSize="22px"
             fontWeight="400px"
