@@ -1,7 +1,7 @@
 import { Button, Flex, Image, Text } from "@chakra-ui/react";
 import React from "react";
-import image from "../image/homepage-hero.webp";
-import GitHub from "./GitHub";
+import image from "../../image/homepage-hero.webp";
+import GitHub from "../GitHub";
 function Menu() {
   return (
     <Flex mt="100px" mx="200px">

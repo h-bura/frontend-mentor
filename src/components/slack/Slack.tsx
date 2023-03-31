@@ -8,7 +8,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import React from "react";
-import SlackImage from "../image/logo-slack.svg";
+import SlackImage from "../../image/logo-slack.svg";
 function Slack() {
   return (
     <Box

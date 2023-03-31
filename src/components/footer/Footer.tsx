@@ -10,7 +10,7 @@ import {
   Spacer,
   Link,
 } from "@chakra-ui/react";
-import FmLogo from "./FmLogo";
+import FmLogo from "../FmLogo";
 import { BsTwitter, BsFacebook } from "react-icons/bs";
 import { AiFillLinkedin } from "react-icons/ai";
 const FOOTERS = [
@@ -31,6 +31,7 @@ const FOOTERS = [
     connections: ["Hire developers"],
   },
 ];
+const CONNECTS = ["Terms", "Cookie Policy", "Privacy Policy", "License"];
 function Footer() {
   return (
     <>
@@ -62,7 +63,7 @@ function Footer() {
               h="50px"
               type="email"
               fontSize="25px"
-            ></Input>
+            />
             <Button
               w="200px"
               h="60px"
@@ -80,14 +81,14 @@ function Footer() {
         <Flex gap="120px">
           {FOOTERS.map((footer) => (
             <Flex flexDirection="column">
-              <Flex
+              <Text
                 fontSize="21px"
                 fontWeight="bold"
                 fontFamily="Heebo, sans-serif;"
                 letterSpacing="2px"
               >
                 {footer.title}
-              </Flex>
+              </Text>
               <Flex
                 flexDirection="column"
                 fontSize="20px"
@@ -95,7 +96,7 @@ function Footer() {
                 color="rgb(115, 115, 115)"
                 gap="10px"
               >
-                {footer["connections"].map((connection) => (
+                {footer.connections.map((connection) => (
                   <Link>{connection}</Link>
                 ))}
               </Flex>
@@ -115,10 +116,9 @@ function Footer() {
         </Text>
         <Spacer />
         <Flex gap="30px" mr="50px" fontSize="20px">
-          <Link>Terms</Link>
-          <Link>Cookie Policy</Link>
-          <Link>Privacy Policy</Link>
-          <Link>License</Link>
+          {CONNECTS.map((connect) => (
+            <Link>{connect}</Link>
+          ))}
         </Flex>
       </Flex>
     </>

@@ -1,7 +1,7 @@
 import React from "react";
 import { Flex, Spacer, Text, HStack, Divider, Button } from "@chakra-ui/react";
-import FmLogo from "./FmLogo";
-import GitHub from "./GitHub";
+import FmLogo from "../FmLogo";
+import GitHub from "../GitHub";
 const HEADER_ITEMS = ["CHALLANGES", "SOLUTIONS", "RESOURCES"];
 function Navbar() {
   return (
