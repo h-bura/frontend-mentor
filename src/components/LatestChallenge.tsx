@@ -19,7 +19,12 @@ function LatestChallenge() {
         </Center>
       </Box>
       <Center>
-        <Flex flexWrap="wrap" justifyContent="space-around" mt="-250px">
+        <Flex
+          mx="150px"
+          flexWrap="wrap"
+          justifyContent="space-around"
+          mt="-250px"
+        >
           {CHALLANGES_DATA.map((item) => (
             <ChallangeCard
               image={item.image}

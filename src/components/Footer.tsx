@@ -16,19 +16,19 @@ import { AiFillLinkedin } from "react-icons/ai";
 const FOOTERS = [
   {
     title: "FRONTEND MENTOR",
-    link: ["Unlock Pro", "Contact us", "Blog"],
+    connections: ["Unlock Pro", "Contact us", "Blog"],
   },
   {
     title: "EXPLORE",
-    link: ["Challenges", "Solutions", "Resources"],
+    connections: ["Challenges", "Solutions", "Resources"],
   },
   {
     title: "COMMUNITY",
-    link: ["Slack", "Guidelines", "FAQs"],
+    connections: ["Slack", "Guidelines", "FAQs"],
   },
   {
     title: "FOR COMPANIES",
-    link: ["Hire developers"],
+    connections: ["Hire developers"],
   },
 ];
 function Footer() {
@@ -95,9 +95,9 @@ function Footer() {
                 color="rgb(115, 115, 115)"
                 gap="10px"
               >
-                <Link>{footer.link[0]}</Link>
-                <Link>{footer.link[1]}</Link>
-                <Link> {footer.link[2]}</Link>
+                {footer["connections"].map((connection) => (
+                  <Link>{connection}</Link>
+                ))}
               </Flex>
             </Flex>
           ))}
