@@ -9,11 +9,10 @@ function Navbar() {
       <Flex p="4">
         <FmLogo />
         <Spacer />
-        <HStack as="b" spacing="10" fontSize="14">
+        <HStack fontWeight="bold" spacing="10" fontSize="18px">
           {HEADER_ITEMS.map((item) => (
             <Text
               key={item}
-              fontSize="18px"
               cursor="pointer "
               _hover={{ textDecoration: "underline red 25%" }}
             >
@@ -21,7 +20,6 @@ function Navbar() {
             </Text>
           ))}
           <Text
-            fontSize="18px"
             cursor="pointer "
             _hover={{ textDecoration: "underline red 25%" }}
           >
