@@ -2,7 +2,21 @@ import React from "react";
 import { Flex, Spacer, Text, HStack, Divider, Button } from "@chakra-ui/react";
 import FmLogo from "../FmLogo";
 import GitHub from "../GitHub";
-const HEADER_ITEMS = ["CHALLANGES", "SOLUTIONS", "RESOURCES"];
+import { Link } from "react-router-dom";
+const HEADER_ITEMS = [
+  {
+    title: "CHALLANGES",
+    link: "/challanges",
+  },
+  {
+    title: "SOLUTIONS",
+    link: "/solutions",
+  },
+  {
+    title: "RESOURCES",
+    link: "/resources",
+  },
+];
 function Navbar() {
   return (
     <>
@@ -11,13 +25,15 @@ function Navbar() {
         <Spacer />
         <HStack fontWeight="bold" spacing="10" fontSize="18px">
           {HEADER_ITEMS.map((item) => (
-            <Text
-              key={item}
-              cursor="pointer "
-              _hover={{ textDecoration: "underline red 25%" }}
-            >
-              {item}
-            </Text>
+            <Link to={item.link}>
+              <Text
+                key={item.link}
+                cursor="pointer "
+                _hover={{ textDecoration: "underline red 25%" }}
+              >
+                {item.title}
+              </Text>
+            </Link>
           ))}
           <Text
             cursor="pointer "

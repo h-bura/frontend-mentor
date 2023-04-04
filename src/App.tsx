@@ -1,20 +1,24 @@
 import * as React from "react";
 import { ChakraProvider, theme } from "@chakra-ui/react";
-import Navbar from "./components/Navbar/Navbar";
-import Header from "./components/Header/Header";
-import HowItWork from "./components/HowItWork/HowItWork";
-import LatestChallenge from "./components/LatestChallanges/LatestChallenge";
-import Menu from "./components/Menu/Menu";
-import Slack from "./components/Slack/Slack";
-import Footer from "./components/Footer/Footer";
+import Navbar from "./components/Navbar";
+import Header from "./components/Header";
+import Slack from "./components/Slack";
+import Footer from "./components/Footer";
+import { BrowserRouter } from "react-router-dom";
+import Home from "./Pages/Home";
+import Challanges from "./Pages/Challanges";
+import { Route, Routes } from "react-router";
 export const App = () => (
   <ChakraProvider theme={theme}>
-    <Header />
-    <Navbar />
-    <Menu />
-    <HowItWork />
-    <LatestChallenge />
-    <Slack />
-    <Footer />
+    <BrowserRouter>
+      <Header />
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/challanges" element={<Challanges />} />
+      </Routes>
+      <Slack />
+      <Footer />
+    </BrowserRouter>
   </ChakraProvider>
 );

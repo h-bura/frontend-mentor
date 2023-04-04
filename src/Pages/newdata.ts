@@ -5,18 +5,18 @@
 //level:number,
 //LevelText:string,
 //description:string
-import image1 from "../../image/image1.jpg";
-import image2 from "../../image/image2.jpg";
-import image3 from "../../image/image3.jpg";
-import image4 from "../../image/image4.jpg";
-import image5 from "../../image/image5.jpg";
-import image6 from "../../image/image6.jpg";
-import image7 from "../../image/image7.jpg";
-import image8 from "../../image/image8.jpg";
-import image9 from "../../image/image9.jpg";
-import image10 from "../../image/image10.jpg";
-import image11 from "../../image/image11.jpg";
-import image12 from "../../image/image12.jpg";
+import image1 from "../image/image1.jpg";
+import image2 from "../image/image2.jpg";
+import image3 from "../image/image3.jpg";
+import image4 from "../image/image4.jpg";
+import image5 from "../image/image5.jpg";
+import image6 from "../image/image6.jpg";
+import image7 from "../image/image7.jpg";
+import image8 from "../image/image8.jpg";
+import image9 from "../image/image9.jpg";
+import image10 from "../image/image10.jpg";
+import image11 from "../image/image11.jpg";
+import image12 from "../image/image12.jpg";
 export const NEW_CHALLANGES_DATA = [
   {
     image: image1,
