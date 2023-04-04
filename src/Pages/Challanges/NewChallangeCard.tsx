@@ -34,7 +34,7 @@ const LEVEL_COLORS = [
 ];
 
 const LEVEL_TEXT = ["NEWBIE", "JUNIOR", "INTERMEDIATE", "ADVANCED"];
-function ChallangeCard({
+function NewChallangeCard({
   image,
   price,
   title,
@@ -129,4 +129,4 @@ function ChallangeCard({
   );
 }
 
-export default ChallangeCard;
+export default NewChallangeCard;

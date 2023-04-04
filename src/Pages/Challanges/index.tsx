@@ -1,13 +1,17 @@
-import { Box, Button, Center, Flex, Text } from "@chakra-ui/react";
+import { Box, Button, Center, Flex } from "@chakra-ui/react";
 import React from "react";
-import { NEW_CHALLANGES_DATA } from "../newdata";
-import NewChallangeCard from "../NewChallangeCard";
-import NewChallange from "./NewChallange";
+import FilterSection from "./FilterSection";
+import { useState } from "react";
+import NewChallangeCard from "./NewChallangeCard";
+
+import getSortedData, { Difficulty } from "./Utils";
 
 function Challanges() {
+  const [sortMethod, setSortMethod] = useState<Difficulty>("normal");
+  const sortedData = getSortedData(sortMethod);
   return (
     <>
-      <NewChallange />
+      <FilterSection setSortMethod={setSortMethod} />
       <Box
         height="400px"
         bg="rgb(62, 84, 163 )"
@@ -26,7 +30,7 @@ function Challanges() {
           justifyContent="space-around"
           mt="-250px"
         >
-          {NEW_CHALLANGES_DATA.map((item) => (
+          {sortedData.map((item) => (
             <NewChallangeCard
               key={item.title}
               image={item.image}

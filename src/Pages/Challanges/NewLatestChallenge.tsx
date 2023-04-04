@@ -1,8 +1,8 @@
 import { Box, Button, Center, Flex } from "@chakra-ui/react";
 import React from "react";
 
-import NewChallangeCard from "../Pages/NewChallangeCard";
-import { NEW_CHALLANGES_DATA } from "../Pages/newdata";
+import NewChallangeCard from "./NewChallangeCard";
+import { NEW_CHALLANGES_DATA } from "./ChallangeData";
 
 function NewLatestChallenge() {
   return (

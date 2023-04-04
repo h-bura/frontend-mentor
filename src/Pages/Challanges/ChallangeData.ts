@@ -5,18 +5,18 @@
 //level:number,
 //LevelText:string,
 //description:string
-import image1 from "../image/image1.jpg";
-import image2 from "../image/image2.jpg";
-import image3 from "../image/image3.jpg";
-import image4 from "../image/image4.jpg";
-import image5 from "../image/image5.jpg";
-import image6 from "../image/image6.jpg";
-import image7 from "../image/image7.jpg";
-import image8 from "../image/image8.jpg";
-import image9 from "../image/image9.jpg";
-import image10 from "../image/image10.jpg";
-import image11 from "../image/image11.jpg";
-import image12 from "../image/image12.jpg";
+import image1 from "../../image/image1.jpg";
+import image2 from "../../image/image2.jpg";
+import image3 from "../../image/image3.jpg";
+import image4 from "../../image/image4.jpg";
+import image5 from "../../image/image5.jpg";
+import image6 from "../../image/image6.jpg";
+import image7 from "../../image/image7.jpg";
+import image8 from "../../image/image8.jpg";
+import image9 from "../../image/image9.jpg";
+import image10 from "../../image/image10.jpg";
+import image11 from "../../image/image11.jpg";
+import image12 from "../../image/image12.jpg";
 export const NEW_CHALLANGES_DATA = [
   {
     image: image1,
@@ -75,11 +75,11 @@ export const NEW_CHALLANGES_DATA = [
   {
     image: image7,
     price: "FREE",
-    title: " News homepage",
+    title: " Intro section with dropdown navigation",
     techs: ["HTML", "CSS", "JS"],
     level: 2,
     description:
-      "This news homepage will be an excellent opportunity to practice your CSS Grid skills. There will be lots of tricky decisions to make and plenty of learning opportunities!",
+      "This challenge will test your ability to create dropdown navigation menus, a common pattern on larger sites. It will also provide some nice basic layout challenges.",
   },
   {
     image: image8,
@@ -119,11 +119,11 @@ export const NEW_CHALLANGES_DATA = [
   },
   {
     image: image12,
-    price: "PREMIUM",
-    title: "  Single-page design portfolio",
+    price: "FREE",
+    title: " Expenses chart component",
     techs: ["HTML", "CSS", "JS"],
     level: 2,
     description:
-      "  This project will test your layout skills, especially in making the site fully responsive. The skills grid is a perfect chance to practice CSS Grid.",
+      "  In this challenge, you'll create a bar chart component from scratch. We provide a local JSON file, so you can add the chart data dynamically if you choose.",
   },
 ];

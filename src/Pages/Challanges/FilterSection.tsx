@@ -10,8 +10,13 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { RiArrowDropDownLine } from "react-icons/ri";
+import { Difficulty } from "./Utils";
 
-function NewChallange() {
+function FilterSection({
+  setSortMethod,
+}: {
+  setSortMethod: React.Dispatch<React.SetStateAction<Difficulty>>;
+}) {
   return (
     <Flex w="100%" h="80px" borderY="1px solid rgb(219, 229, 230)">
       <Flex
@@ -53,8 +58,12 @@ function NewChallange() {
             </MenuButton>
             <MenuList fontSize="20px">
               <MenuItem>Most Recent</MenuItem>
-              <MenuItem>Difficultly(easier first)</MenuItem>
-              <MenuItem>Difficultly(hard first)</MenuItem>
+              <MenuItem onClick={() => setSortMethod("easy")}>
+                Difficultly(easier first)
+              </MenuItem>
+              <MenuItem onClick={() => setSortMethod("hard")}>
+                Difficultly(hard first)
+              </MenuItem>
             </MenuList>
           </Menu>
         </Flex>
@@ -100,4 +109,4 @@ function NewChallange() {
   );
 }
 
-export default NewChallange;
+export default FilterSection;
