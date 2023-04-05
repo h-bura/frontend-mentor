@@ -92,7 +92,11 @@ function ChallangeCard({
                 lineHeight="60px"
               >
                 {techs.map((item, index) => (
-                  <ListItem color={TECH_COLORS[index]} fontWeight="bold">
+                  <ListItem
+                    key={index}
+                    color={TECH_COLORS[index]}
+                    fontWeight="bold"
+                  >
                     {item}
                   </ListItem>
                 ))}

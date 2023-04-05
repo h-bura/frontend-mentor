@@ -93,7 +93,11 @@ function NewChallangeCard({
                 lineHeight="50px"
               >
                 {techs.map((item, index) => (
-                  <ListItem color={TECH_COLORS[index]} fontWeight="bold">
+                  <ListItem
+                    key={item}
+                    color={TECH_COLORS[index]}
+                    fontWeight="bold"
+                  >
                     {item}
                   </ListItem>
                 ))}

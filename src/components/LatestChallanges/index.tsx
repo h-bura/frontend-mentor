@@ -25,8 +25,9 @@ function LatestChallenge() {
           mt="-225px"
           mx="30px"
         >
-          {CHALLANGES_DATA.map((item) => (
+          {CHALLANGES_DATA.map((item, index) => (
             <ChallangeCard
+              key={index}
               image={item.image}
               title={item.title}
               price={item.price}

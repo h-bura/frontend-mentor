@@ -79,8 +79,8 @@ function Footer() {
         </Flex>
         <Spacer />
         <Flex gap="10px" w="800px" justifyContent="flex-end">
-          {FOOTERS.map((footer) => (
-            <Flex flexDirection="column">
+          {FOOTERS.map((footer, index) => (
+            <Flex key={index} flexDirection="column">
               <Text
                 fontSize="14px"
                 fontWeight="bold"
@@ -97,7 +97,7 @@ function Footer() {
                 gap="8px"
               >
                 {footer.connections.map((connection) => (
-                  <Link>{connection}</Link>
+                  <Link key={connection}>{connection}</Link>
                 ))}
               </Flex>
             </Flex>
@@ -117,7 +117,7 @@ function Footer() {
         <Spacer />
         <Flex gap="30px" mr="50px" fontSize="18px">
           {CONNECTS.map((connect) => (
-            <Link>{connect}</Link>
+            <Link key={connect}>{connect}</Link>
           ))}
         </Flex>
       </Flex>

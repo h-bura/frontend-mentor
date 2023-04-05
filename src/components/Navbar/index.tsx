@@ -25,10 +25,9 @@ function Navbar() {
         <Spacer />
         <HStack fontWeight="bold" spacing="20px" fontSize="13px">
           {HEADER_ITEMS.map((item) => (
-            <Link to={item.link}>
+            <Link key={item.link} to={item.link}>
               <Text
                 py="4px"
-                key={item.link}
                 cursor="pointer "
                 _hover={{ borderBottom: "4px solid red" }}
               >

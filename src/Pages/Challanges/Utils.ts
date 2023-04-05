@@ -1,4 +1,4 @@
-import { NEW_CHALLANGES_DATA } from "./ChallangeData";
+import { CHALLANGE_DATA } from "./ChallangeData";
 export type Difficulty = "easy" | "hard" | "normal";
 export type Filters = {
   type: string[];
@@ -8,13 +8,16 @@ export type Filters = {
 
 const getSortedData = (difficulty: Difficulty, filters: Filters) => {
   if (difficulty === "easy") {
-    NEW_CHALLANGES_DATA.sort((a, b) => (a.level > b.level ? 1 : -1));
-    return NEW_CHALLANGES_DATA;
+    CHALLANGE_DATA.sort((a, b) => (a.level > b.level ? 1 : -1));
+    return CHALLANGE_DATA;
   }
   if (difficulty === "hard") {
-    return NEW_CHALLANGES_DATA.sort((a, b) => (a.level < b.level ? 1 : -1));
+    return CHALLANGE_DATA.sort((a, b) => (a.level < b.level ? 1 : -1));
+  }
+  if (filters.type) {
+    return CHALLANGE_DATA.filter((a) => a.price === "Premium" || "Free");
   }
 
-  return NEW_CHALLANGES_DATA;
+  return CHALLANGE_DATA;
 };
 export default getSortedData;

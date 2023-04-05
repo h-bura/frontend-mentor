@@ -36,11 +36,56 @@ function FilterSection({
 }: FilterSectionProps) {
   const priceHandler = (item: string) => {
     if (sortFilters.type.includes(item)) {
-      setSortFilters({ ...sortFilters, type: [...sortFilters.type, item] });
+      let filterType = [...sortFilters.type];
+      filterType.forEach((element, index) => {
+        if (element === item) filterType.splice(index, 1);
+      });
+
+      setSortFilters({
+        ...sortFilters,
+        type: filterType,
+      });
     } else {
       setSortFilters({ ...sortFilters, type: [...sortFilters.type, item] });
     }
   };
+  const difficultyHandler = (item: string) => {
+    if (sortFilters.difficulty.includes(item)) {
+      let filterType = [...sortFilters.difficulty];
+      filterType.forEach((element, index) => {
+        if (element === item) filterType.splice(index, 1);
+      });
+
+      setSortFilters({
+        ...sortFilters,
+        difficulty: filterType,
+      });
+    } else {
+      setSortFilters({
+        ...sortFilters,
+        difficulty: [...sortFilters.difficulty, item],
+      });
+    }
+  };
+  const languageHandler = (item: string) => {
+    if (sortFilters.languages.includes(item)) {
+      let filterType = [...sortFilters.languages];
+      filterType.forEach((element, index) => {
+        if (element === item) filterType.splice(index, 1);
+      });
+
+      setSortFilters({
+        ...sortFilters,
+        languages: filterType,
+      });
+    } else {
+      setSortFilters({
+        ...sortFilters,
+        languages: [...sortFilters.languages, item],
+      });
+    }
+  };
+
   return (
     <>
       <Flex w="100%" h="55px" borderY="1px solid rgb(219, 229, 230)">
@@ -130,13 +175,12 @@ function FilterSection({
                   <CheckboxGroup colorScheme="blue">
                     <Flex flexDirection="column">
                       {PRICE_TYPES.map((item) => (
-                        <Box borderTop="1px solid grey">
+                        <Box key={item} borderTop="1px solid grey">
                           <Checkbox
                             size="lg"
                             p="6px"
                             value={item}
-                            onClick={() => priceHandler(item)}
-                            key={item}
+                            onChange={() => priceHandler(item)}
                           >
                             {item}
                           </Checkbox>
@@ -150,8 +194,13 @@ function FilterSection({
                   <CheckboxGroup colorScheme="blue">
                     <Flex flexDirection="column">
                       {DIFFICULTY_TYPES.map((item) => (
-                        <Box borderTop="1px solid grey">
-                          <Checkbox size="lg" p="6px" value={item}>
+                        <Box key={item} borderTop="1px solid grey">
+                          <Checkbox
+                            size="lg"
+                            p="6px"
+                            value={item}
+                            onChange={() => difficultyHandler(item)}
+                          >
                             {item}
                           </Checkbox>
                         </Box>
@@ -164,13 +213,16 @@ function FilterSection({
                   <CheckboxGroup colorScheme="blue">
                     <Flex flexDirection="column">
                       {LANGUAGE_TYPES.map((item) => (
-                        <>
-                          <Box borderTop="1px solid grey">
-                            <Checkbox size="lg" p="6px" value={item}>
-                              {item}
-                            </Checkbox>
-                          </Box>
-                        </>
+                        <Box key={item} borderTop="1px solid grey">
+                          <Checkbox
+                            size="lg"
+                            p="6px"
+                            value={item}
+                            onChange={() => languageHandler(item)}
+                          >
+                            {item}
+                          </Checkbox>
+                        </Box>
                       ))}
                     </Flex>
                   </CheckboxGroup>

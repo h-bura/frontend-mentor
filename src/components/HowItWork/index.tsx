@@ -39,8 +39,9 @@ function HowItWork() {
           HOW IT WORKS
         </Heading>
         <Flex>
-          {ITEMS.map((item) => (
+          {ITEMS.map((item, index) => (
             <ItemCard
+              key={index}
               Icon={item.icon}
               title={item.title}
               description={item.description}

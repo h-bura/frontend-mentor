@@ -17,7 +17,7 @@ import image9 from "../../image/image9.jpg";
 import image10 from "../../image/image10.jpg";
 import image11 from "../../image/image11.jpg";
 import image12 from "../../image/image12.jpg";
-export const NEW_CHALLANGES_DATA = [
+export const CHALLANGE_DATA = [
   {
     image: image1,
     price: "Premium",
