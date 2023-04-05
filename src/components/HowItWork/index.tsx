@@ -34,8 +34,8 @@ const ITEMS = [
 function HowItWork() {
   return (
     <>
-      <VStack p="4" marginTop="270px">
-        <Heading fontSize="20px" mb="100px">
+      <VStack mt="150px" mx="30px">
+        <Heading fontSize="17px" mb="50px">
           HOW IT WORKS
         </Heading>
         <Flex>

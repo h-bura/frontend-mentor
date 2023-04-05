@@ -20,25 +20,23 @@ const HEADER_ITEMS = [
 function Navbar() {
   return (
     <>
-      <Flex p="4">
+      <Flex p="10px">
         <FmLogo />
         <Spacer />
-        <HStack fontWeight="bold" spacing="10" fontSize="18px">
+        <HStack fontWeight="bold" spacing="20px" fontSize="13px">
           {HEADER_ITEMS.map((item) => (
             <Link to={item.link}>
               <Text
+                py="4px"
                 key={item.link}
                 cursor="pointer "
-                _hover={{ textDecoration: "underline red 25%" }}
+                _hover={{ borderBottom: "4px solid red" }}
               >
                 {item.title}
               </Text>
             </Link>
           ))}
-          <Text
-            cursor="pointer "
-            _hover={{ textDecoration: "underline red 25%" }}
-          >
+          <Text cursor="pointer " _hover={{ borderBottom: "4px solid red" }}>
             UNLOCK
             <span
               style={{

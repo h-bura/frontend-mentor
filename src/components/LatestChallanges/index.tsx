@@ -1,4 +1,4 @@
-import { Box, Button, Center, Flex } from "@chakra-ui/react";
+import { Box, Button, Center, Flex, Text } from "@chakra-ui/react";
 import React from "react";
 
 import ChallangeCard from "../LatestChallanges/ChallangeCard";
@@ -8,22 +8,22 @@ function LatestChallenge() {
   return (
     <>
       <Box
-        height="400px"
+        height="350px"
         bg="rgb(62, 84, 163 )"
-        mt="100px"
-        mx="50px"
+        mt="90px"
+        mx="30px"
         borderRadius="10px"
       >
-        <Center h="120px" fontSize="22px" fontWeight="bold" color="white">
-          LATEST CHALLENGES
+        <Center h="120px" fontSize="18px" fontWeight="bold" color="white">
+          <Text mt="17px">LATEST CHALLENGES</Text>
         </Center>
       </Box>
       <Center>
         <Flex
-          mx="150px"
           flexWrap="wrap"
-          justifyContent="space-around"
-          mt="-250px"
+          justifyContent="space-evenly"
+          mt="-225px"
+          mx="30px"
         >
           {CHALLANGES_DATA.map((item) => (
             <ChallangeCard
@@ -37,11 +37,11 @@ function LatestChallenge() {
           ))}
         </Flex>
       </Center>
-      <Center mt="20px">
+      <Center mt="40px">
         <Button
           textAlign="center"
           textDecoration="underline red"
-          fontSize="25px"
+          fontSize="17px"
           bg="white"
           _hover={{ textDecoration: "none" }}
           mt="10px"

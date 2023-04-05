@@ -1,35 +1,30 @@
-import { Box, Button, Center, Flex } from "@chakra-ui/react";
+import { Button, Center, Flex } from "@chakra-ui/react";
 import React from "react";
 import FilterSection from "./FilterSection";
 import { useState } from "react";
 import NewChallangeCard from "./NewChallangeCard";
 
-import getSortedData, { Difficulty } from "./Utils";
+import getSortedData, { Difficulty, Filters } from "./Utils";
 
 function Challanges() {
   const [sortMethod, setSortMethod] = useState<Difficulty>("normal");
-  const sortedData = getSortedData(sortMethod);
+  const [sortFilters, setSortFilters] = useState<Filters>({
+    type: [],
+    difficulty: [],
+    languages: [],
+  });
+  console.log(sortFilters);
+  const sortedData = getSortedData(sortMethod, sortFilters);
   return (
     <>
-      <FilterSection setSortMethod={setSortMethod} />
-      <Box
-        height="400px"
-        bg="rgb(62, 84, 163 )"
-        mt="100px"
-        mx="50px"
-        borderRadius="10px"
-      >
-        <Center h="120px" fontSize="22px" fontWeight="bold" color="white">
-          LATEST CHALLENGES
-        </Center>
-      </Box>
+      <FilterSection
+        setSortMethod={setSortMethod}
+        setSortFilters={setSortFilters}
+        sortFilters={sortFilters}
+      />
+
       <Center>
-        <Flex
-          mx="150px"
-          flexWrap="wrap"
-          justifyContent="space-around"
-          mt="-250px"
-        >
+        <Flex flexWrap="wrap" justifyContent="space-evenly" mx="30px">
           {sortedData.map((item) => (
             <NewChallangeCard
               key={item.title}
@@ -43,11 +38,11 @@ function Challanges() {
           ))}
         </Flex>
       </Center>
-      <Center mt="20px">
+      <Center mt="40px">
         <Button
           textAlign="center"
           textDecoration="underline red"
-          fontSize="25px"
+          fontSize="17px"
           bg="white"
           _hover={{ textDecoration: "none" }}
           mt="10px"

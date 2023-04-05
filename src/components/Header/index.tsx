@@ -6,10 +6,10 @@ function Header() {
     <HStack
       bg="rgb(62, 84, 163)"
       color="white"
-      p="4"
+      p="12px"
       display="flex"
-      fontSize="xl"
-      as="b"
+      fontSize="17px"
+      fontWeight="bold"
       alignItems="center"
       justifyContent="center"
     >

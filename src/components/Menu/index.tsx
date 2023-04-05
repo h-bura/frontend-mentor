@@ -4,39 +4,40 @@ import image from "../../image/homepage-hero.webp";
 import GitHub from "../GitHub";
 function Menu() {
   return (
-    <Flex mt="100px" mx="200px">
-      <Flex direction="column" width="100%" alignItems="flex-start">
+    <Flex mt="90px" mx="25px">
+      <Flex direction="column" width="100%" alignItems="flex-start" mr="20px">
         <Text
-          fontSize="65px"
+          fontSize="50px"
           color=" rgb(62, 84, 163)"
           width="100%"
-          mb="50px"
+          mb="20px"
           fontWeight="500"
+          lineHeight="65px"
         >
           Improve your front-end coding skills by building real projects
         </Text>
-        <Text fontSize="25px" color="rgb(28, 32, 34)" width="100%">
+        <Text fontSize="20px" color="rgb(28, 32, 34)" width="100%">
           Solve real-world HTML, CSS and JavaScript challenges whilst working to
           professional designs. Join 587.077 developers building projects,
           reviewing code, and helping each other get better.
         </Text>
         <Button
-          h="60px"
-          w="350px"
+          h="50px"
+          w="275px"
           bg="red"
           color="white"
           _hover={{ textDecoration: "none", cursor: "pointer" }}
           rightIcon={<GitHub />}
           borderRadius="25px"
-          mt="50px"
-          fontSize="20px"
+          mt="40px"
+          fontSize="15px"
         >
           LOG IN WITH GITHUB
         </Button>
       </Flex>
 
-      <Flex ml="200px" width="100%">
-        <Image objectFit="cover" src={image} />
+      <Flex w="100%" h="100%" alignSelf="center">
+        <Image src={image} />
       </Flex>
     </Flex>
   );

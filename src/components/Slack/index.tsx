@@ -12,42 +12,48 @@ import SlackImage from "../../image/logo-slack.svg";
 function Slack() {
   return (
     <Box
-      mt="160px"
-      mx="90px"
+      mt="165px"
+      mx="70px"
       bgColor="#5161B0"
       color="white"
-      h="750px"
+      h="620px"
       borderRadius="15px"
     >
       <Center>
-        <Image w="270px" mt="120px" src={SlackImage}></Image>
+        <Image w="200px" mt="83px" src={SlackImage}></Image>
       </Center>
-      <Heading textAlign="center" mt="50px" fontSize="20px">
+      <Heading textAlign="center" mt="42px" fontSize="17px">
         JOIN OUR SLACK COMMUNITY
       </Heading>
-      <Text textAlign="center" mt="40px" fontSize="38px" px="25px">
+      <Text
+        textAlign="center"
+        mt="30px"
+        fontSize="30px"
+        px="40px"
+        lineHeight="33px"
+      >
         Join over 180.000 people taking the challenges, talking about their
         code, helping each other, and chatting about all things front-end!
       </Text>
-      <Center mt="50px">
+      <Center mt="50px" px="60px">
         <Input
-          fontSize="25px"
+          fontSize="17px"
           color="grey"
           w="600px"
           bgColor="white"
-          h="60px"
+          h="50px"
           placeholder="email@example.com"
         />
         <Button
-          fontSize="25px"
-          ml="60px"
+          fontSize="18px"
+          ml="30px"
           bgColor="white"
           color="blue.600"
-          h="60px"
+          h="50px"
           borderLeftRadius="full"
           borderRightRadius="full"
           textAlign="center"
-          px="40px"
+          w="250px"
         >
           REQUEST INVITE
         </Button>

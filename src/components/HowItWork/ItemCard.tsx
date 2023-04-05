@@ -9,16 +9,22 @@ type CardProps = {
 };
 function ItemCard({ Icon, title, description }: CardProps) {
   return (
-    <VStack mx="30px" mb="50px">
+    <VStack m="12px">
       <Center>
-        <Icon size="70" color="rgb(62, 84, 163)" />
+        <Icon size="60" color="rgb(62, 84, 163)" />
       </Center>
 
-      <Heading fontSize="30px" fontWeight="600" py="20px">
+      <Heading
+        textAlign="center"
+        fontSize="25px"
+        fontWeight="600"
+        pt="20px"
+        pb="7px"
+      >
         {title}
       </Heading>
 
-      <Text textAlign="center" fontSize="19px" fontWeight="500px">
+      <Text textAlign="center" fontSize="15px" fontWeight="500" m="0px">
         {description}
       </Text>
     </VStack>

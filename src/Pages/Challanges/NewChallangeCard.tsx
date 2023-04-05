@@ -2,6 +2,7 @@ import {
   Box,
   Card,
   CardBody,
+  Flex,
   Heading,
   Image,
   List,
@@ -44,40 +45,53 @@ function NewChallangeCard({
 }: CardProps) {
   return (
     <>
-      <Card w="450px" h="750px" my="15px">
+      <Card w="280px" h="530px" mt="20px">
         <CardBody>
-          <Image src={image} borderRadius="lg" _hover={{ cursor: "pointer" }} />
+          <Image
+            w="240px"
+            h="175.83px"
+            src={image}
+            borderRadius="lg"
+            _hover={{ cursor: "pointer" }}
+          />
           <Text
             display="inline-flex"
             position="relative"
-            bottom="300px"
-            left="290px"
-            color={price === "FREE" ? "rgb(62, 84, 163)" : "white"}
+            bottom="180px"
+            left="160px"
+            color={price === "Free" ? "rgb(62, 84, 163)" : "white"}
             backgroundColor={
-              price === "FREE" ? "rgb(231, 235, 249)" : "rgb(62, 84, 163)"
+              price === "Free" ? "rgb(231, 235, 249)" : "rgb(62, 84, 163)"
             }
             borderRadius="5rem"
-            fontSize="20px"
+            fontSize="15px"
             justifyContent="center"
             alignItems="center"
-            width="120px"
+            width="90px"
             p="3px 7px"
             fontWeight="bold"
           >
             {price}
           </Text>
-          <Stack mt="6" spacing="3">
+          <Stack>
             <Heading
-              fontSize="32px"
+              fontSize="27px"
               as="button"
               _hover={{ textDecoration: "underline" }}
               textAlign="start"
               fontWeight="400px"
+              lineHeight="30px"
             >
               {title}
             </Heading>
-            <Box display="inline-flex" pt="10px">
-              <List display="inline-flex" gap="10px" fontSize="22px">
+
+            <Flex flexWrap="wrap">
+              <List
+                display="inline-flex"
+                gap="10px"
+                fontSize="17px"
+                lineHeight="50px"
+              >
                 {techs.map((item, index) => (
                   <ListItem color={TECH_COLORS[index]} fontWeight="bold">
                     {item}
@@ -85,41 +99,40 @@ function NewChallangeCard({
                 ))}
               </List>
               <Spacer />
-              <List display="flex">
+              <List display="flex" alignItems="center">
                 <ListItem
+                  display="flex"
                   bg={LEVEL_COLORS[level - 1]}
                   color="white"
                   fontWeight="bold"
-                  fontSize="18px"
-                  w="30px"
+                  fontSize="15px"
+                  w="20px"
                   borderLeftRadius="7px"
-                  textAlign="center"
-                  h="100%"
+                  h="25px"
+                  justifyContent="center"
+                  alignItems="center"
                 >
                   {level}
                 </ListItem>
 
                 <ListItem
-                  fontSize="18px"
+                  fontSize="15px"
                   border={"1px solid"}
                   borderColor={LEVEL_COLORS[level - 1]}
                   fontWeight="bold"
                   color={LEVEL_COLORS[level - 1]}
                   borderRightRadius="7px"
                   justifyContent="center"
+                  alignItems="center"
                   px="15px"
-                  h="100%"
+                  h="25px"
                 >
                   {LEVEL_TEXT[level - 1]}
                 </ListItem>
               </List>
-            </Box>
-            <Text
-              fontSize="22px"
-              fontWeight="400px"
-              pt="15px"
-              color="rgb(115, 115, 115)"
-            >
+            </Flex>
+
+            <Text fontSize="17px" fontWeight="400px" color="rgb(115, 115, 115)">
               {description}
             </Text>
           </Stack>
