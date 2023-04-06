@@ -1,7 +1,7 @@
 import { Button, Center, Flex } from "@chakra-ui/react";
 import React from "react";
 import FilterSection from "./FilterSection";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import NewChallangeCard from "./NewChallangeCard";
 
 import getSortedData, { Difficulty, Filters } from "./Utils";
@@ -13,7 +13,6 @@ function Challanges() {
     difficulty: [],
     languages: [],
   });
-  console.log(sortFilters);
   const sortedData = getSortedData(sortMethod, sortFilters);
   return (
     <>

@@ -57,7 +57,7 @@ function Footer() {
           </Text>
           <HStack pt="18px">
             <Input
-              placeholder="email.example.com"
+              placeholder="email@example.com"
               border="0.5px solid rgb(219, 229, 230)"
               w="230px"
               h="40px"

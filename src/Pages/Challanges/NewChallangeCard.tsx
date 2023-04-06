@@ -1,5 +1,4 @@
 import {
-  Box,
   Card,
   CardBody,
   Flex,
@@ -12,6 +11,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import React from "react";
+import { DIFFICULTY_TYPES } from "./FilterSection";
 
 type CardProps = {
   image: any;
@@ -34,7 +34,6 @@ const LEVEL_COLORS = [
   "rgb(244, 137, 37)",
 ];
 
-const LEVEL_TEXT = ["NEWBIE", "JUNIOR", "INTERMEDIATE", "ADVANCED"];
 function NewChallangeCard({
   image,
   price,
@@ -131,7 +130,7 @@ function NewChallangeCard({
                   px="15px"
                   h="25px"
                 >
-                  {LEVEL_TEXT[level - 1]}
+                  {DIFFICULTY_TYPES[level - 1]}
                 </ListItem>
               </List>
             </Flex>

@@ -15,14 +15,14 @@ import {
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { Difficulty, Filters } from "./Utils";
 const PRICE_TYPES = ["Free", "Free+", "Premium"];
-const DIFFICULTY_TYPES = [
+export const DIFFICULTY_TYPES = [
   "NEWBIE",
   "JUNIOR",
   "INTERMEDIATE",
   "ADVANCED",
   "GURU",
 ];
-const LANGUAGE_TYPES = ["HTML", "CSS", "JS", "API"];
+const LANGUAGE_TYPES = ["CSS", "JS", "API"];
 type FilterSectionProps = {
   setSortMethod: React.Dispatch<React.SetStateAction<Difficulty>>;
   setSortFilters: React.Dispatch<React.SetStateAction<Filters>>;
@@ -134,7 +134,9 @@ function FilterSection({
                 </Flex>
               </MenuButton>
               <MenuList fontSize="20px">
-                <MenuItem>Most Recent</MenuItem>
+                <MenuItem onClick={() => setSortMethod("normal")}>
+                  Most Recent
+                </MenuItem>
                 <MenuItem onClick={() => setSortMethod("easy")}>
                   Difficultly(easier first)
                 </MenuItem>
