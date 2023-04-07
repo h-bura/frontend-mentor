@@ -20,7 +20,7 @@ import image12 from "../../image/image12.jpg";
 export const CHALLANGE_DATA = [
   {
     image: image1,
-    price: "Premium",
+    price: "PREMIUM",
     title: " Workit landing page",
     techs: ["HTML", "CSS"],
     level: 1,
@@ -29,7 +29,7 @@ export const CHALLANGE_DATA = [
   },
   {
     image: image2,
-    price: "Free",
+    price: "FREE",
     title: "  Results summary component",
     techs: ["HTML", "CSS"],
     level: 1,
@@ -38,7 +38,7 @@ export const CHALLANGE_DATA = [
   },
   {
     image: image3,
-    price: "Premium",
+    price: "PREMIUM",
     title: "  Dictionary web app",
     techs: ["HTML", "CSS", "JS", "API"],
     level: 3,
@@ -47,7 +47,7 @@ export const CHALLANGE_DATA = [
   },
   {
     image: image4,
-    price: "Free",
+    price: "FREE",
     title: "  Multi-step form",
     techs: ["HTML", "CSS", "JS"],
     level: 4,
@@ -56,7 +56,7 @@ export const CHALLANGE_DATA = [
   },
   {
     image: image5,
-    price: "Premium",
+    price: "PREMIUM",
     title: "  Single-page developer portfolio",
     techs: ["HTML", "CSS", "JS"],
     level: 2,
@@ -65,7 +65,7 @@ export const CHALLANGE_DATA = [
   },
   {
     image: image6,
-    price: "Free",
+    price: "FREE",
     title: "  News homepage",
     techs: ["HTML", "CSS", "JS"],
     level: 2,
@@ -74,7 +74,7 @@ export const CHALLANGE_DATA = [
   },
   {
     image: image7,
-    price: "Free",
+    price: "FREE",
     title: " Intro section with dropdown navigation",
     techs: ["HTML", "CSS", "JS"],
     level: 2,
@@ -83,7 +83,7 @@ export const CHALLANGE_DATA = [
   },
   {
     image: image8,
-    price: "Premium",
+    price: "PREMIUM",
     title: "  Connect Four game",
     techs: ["HTML", "CSS", "JS"],
     level: 4,
@@ -92,7 +92,7 @@ export const CHALLANGE_DATA = [
   },
   {
     image: image9,
-    price: "Free",
+    price: "FREE",
     title: "  Notifications page",
     techs: ["HTML", "CSS", "JS"],
     level: 4,
@@ -101,7 +101,7 @@ export const CHALLANGE_DATA = [
   },
   {
     image: image10,
-    price: "Premium",
+    price: "PREMIUM",
     title: " Password generator app",
     techs: ["HTML", "CSS", "JS"],
     level: 3,
@@ -110,7 +110,7 @@ export const CHALLANGE_DATA = [
   },
   {
     image: image11,
-    price: "Free",
+    price: "FREE",
     title: " Interactive card details form",
     techs: ["HTML", "CSS", "JS"],
     level: 2,
@@ -119,7 +119,7 @@ export const CHALLANGE_DATA = [
   },
   {
     image: image12,
-    price: "Free",
+    price: "FREE",
     title: " Expenses chart component",
     techs: ["HTML", "CSS", "JS"],
     level: 2,

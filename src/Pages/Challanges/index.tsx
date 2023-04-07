@@ -1,7 +1,7 @@
 import { Button, Center, Flex } from "@chakra-ui/react";
 import React from "react";
 import FilterSection from "./FilterSection";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import NewChallangeCard from "./NewChallangeCard";
 
 import getSortedData, { Difficulty, Filters } from "./Utils";

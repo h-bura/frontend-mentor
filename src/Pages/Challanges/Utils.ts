@@ -17,13 +17,15 @@ const getSortedData = (difficulty: Difficulty, filters: Filters) => {
     level: number;
     description: string;
   }) => {
-    return filters.type.length !== 0
-      ? filters.type.includes(item.price)
-      : true && filters.difficulty.length !== 0
-      ? filters.difficulty.includes(DIFFICULTY_TYPES[item.level - 1])
-      : true && filters.languages.length !== 0
-      ? filters.languages.some((r) => item.techs.indexOf(r) >= 0)
-      : true;
+    return (
+      (filters.type.length !== 0 ? filters.type.includes(item.price) : true) &&
+      (filters.difficulty.length !== 0
+        ? filters.difficulty.includes(DIFFICULTY_TYPES[item.level - 1])
+        : true) &&
+      (filters.languages.length !== 0
+        ? filters.languages.some((r) => item.techs.indexOf(r) >= 0)
+        : true)
+    );
   };
   if (difficulty === "easy") {
     return CLONED_ARRAY.sort((a, b) => (a.level > b.level ? 1 : -1)).filter(
