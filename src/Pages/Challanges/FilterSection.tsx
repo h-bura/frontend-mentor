@@ -13,11 +13,13 @@ import {
   MenuList,
   Spacer,
   Text,
+  useOutsideClick,
 } from "@chakra-ui/react";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { SlArrowDown, SlArrowUp } from "react-icons/sl";
 import { FcInfo } from "react-icons/fc";
 import { Difficulty, Filters } from "./Utils";
+import LearnAbout from "./LearnAbout";
 
 const PRICE_TYPES = ["FREE", "FREE+", "PREMIUM"];
 export const DIFFICULTY_TYPES = [
@@ -39,6 +41,9 @@ function FilterSection({
   setSortFilters,
   sortFilters,
 }: FilterSectionProps) {
+  const [buttonClickSort, setButtonClickSort] = useState(true);
+  const [buttonClickFilter, setButtonClickFilter] = useState(true);
+
   const priceHandler = (item: string) => {
     if (sortFilters.type.includes(item)) {
       let filterType = [...sortFilters.type];
@@ -90,8 +95,6 @@ function FilterSection({
       });
     }
   };
-  const [buttonClickSort, setButtonClickSort] = useState(true);
-  const [buttonClickFilter, setButtonClickFilter] = useState(true);
 
   return (
     <>
@@ -230,10 +233,9 @@ function FilterSection({
                             h="45px"
                             size="lg"
                             p="11px"
-                            value={item}
                             onChange={() => priceHandler(item)}
                             borderColor="rgb(62, 84, 163)"
-                            id="checkId"
+                            isChecked={sortFilters.type.includes(item)}
                           >
                             <Text
                               fontFamily="Barlow, sans-serif"
@@ -265,9 +267,9 @@ function FilterSection({
                           <Checkbox
                             size="lg"
                             p="11px"
-                            value={item}
                             onChange={() => difficultyHandler(item)}
                             borderColor="rgb(62, 84, 163)"
+                            isChecked={sortFilters.difficulty.includes(item)}
                           >
                             <Text
                               fontFamily="Barlow, sans-serif"
@@ -299,9 +301,9 @@ function FilterSection({
                           <Checkbox
                             size="lg"
                             p="11px"
-                            value={item}
                             onChange={() => languageHandler(item)}
                             borderColor="rgb(62, 84, 163)"
+                            isChecked={sortFilters.languages.includes(item)}
                           >
                             <Text
                               fontFamily="Barlow, sans-serif"
@@ -383,8 +385,9 @@ function FilterSection({
           </Text>
         ))}
         <Spacer />
+        <LearnAbout />
 
-        <Text
+        {/* <Text
           display="inline-flex"
           justifyContent="end"
           fontWeight="600"
@@ -396,7 +399,7 @@ function FilterSection({
           <Text ml="10px">
             <FcInfo size="20px" />
           </Text>
-        </Text>
+        </Text>*/}
       </Box>
     </>
   );
