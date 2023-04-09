@@ -39,14 +39,6 @@ function LearnAbout() {
         motionPreset="slideInBottom"
       >
         <ModalOverlay />
-        <ModalCloseButton
-          size="lg"
-          style={{
-            backgroundColor: "white",
-            fontSize: "100%",
-            borderRadius: "50%",
-          }}
-        />
         <ModalContent pt="8px" pb="45px">
           <ModalHeader fontSize="25px">
             What are the different challenge types?

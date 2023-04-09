@@ -13,14 +13,11 @@ import {
   MenuList,
   Spacer,
   Text,
-  useOutsideClick,
 } from "@chakra-ui/react";
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { SlArrowDown, SlArrowUp } from "react-icons/sl";
-import { FcInfo } from "react-icons/fc";
 import { Difficulty, Filters } from "./Utils";
 import LearnAbout from "./LearnAbout";
-
 const PRICE_TYPES = ["FREE", "FREE+", "PREMIUM"];
 export const DIFFICULTY_TYPES = [
   "NEWBİE",
@@ -95,7 +92,6 @@ function FilterSection({
       });
     }
   };
-
   return (
     <>
       <Flex w="100%" h="55px" borderY="1px solid rgb(219, 229, 230)">
@@ -386,20 +382,6 @@ function FilterSection({
         ))}
         <Spacer />
         <LearnAbout />
-
-        {/* <Text
-          display="inline-flex"
-          justifyContent="end"
-          fontWeight="600"
-          alignItems="center"
-          as="button"
-          _hover={{ color: "grey" }}
-        >
-          Learn about our challenge types
-          <Text ml="10px">
-            <FcInfo size="20px" />
-          </Text>
-        </Text>*/}
       </Box>
     </>
   );
