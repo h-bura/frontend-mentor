@@ -2,10 +2,8 @@ import { Button, Center, Flex } from "@chakra-ui/react";
 import React from "react";
 import FilterSection from "./FilterSection";
 import { useState } from "react";
-import NewChallangeCard from "./NewChallangeCard";
-
 import getSortedData, { Difficulty, Filters } from "./Utils";
-
+import ChallangeCard from "./ChallangeCard";
 function Challanges() {
   const [sortMethod, setSortMethod] = useState<Difficulty>("normal");
   const [sortFilters, setSortFilters] = useState<Filters>({
@@ -25,7 +23,7 @@ function Challanges() {
       <Center>
         <Flex flexWrap="wrap" justifyContent="space-evenly" mx="30px">
           {sortedData.map((item) => (
-            <NewChallangeCard
+            <ChallangeCard
               key={item.title}
               image={item.image}
               title={item.title}

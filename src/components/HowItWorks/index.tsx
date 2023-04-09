@@ -31,7 +31,7 @@ const ITEMS = [
   },
 ];
 
-function HowItWork() {
+function HowItWorks() {
   return (
     <>
       <VStack mt="150px" mx="30px">
@@ -53,4 +53,4 @@ function HowItWork() {
   );
 }
 
-export default HowItWork;
+export default HowItWorks;

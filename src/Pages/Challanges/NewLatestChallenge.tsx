@@ -1,7 +1,7 @@
 import { Box, Button, Center, Flex, Text } from "@chakra-ui/react";
 import React from "react";
 
-import NewChallangeCard from "./NewChallangeCard";
+import ChallangeCard from "./ChallangeCard";
 import { CHALLANGE_DATA } from "./ChallangeData";
 
 function NewLatestChallenge() {
@@ -26,7 +26,7 @@ function NewLatestChallenge() {
           mx="30px"
         >
           {CHALLANGE_DATA.map((item) => (
-            <NewChallangeCard
+            <ChallangeCard
               image={item.image}
               title={item.title}
               price={item.price}

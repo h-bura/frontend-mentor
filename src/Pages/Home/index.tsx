@@ -1,4 +1,4 @@
-import HowItWork from "../../components/HowItWork";
+import HowItWorks from "../../components/HowItWorks";
 import LatestChallenge from "../../components/LatestChallanges";
 import Menu from "../../components/Menu";
 
@@ -6,7 +6,7 @@ function Home() {
   return (
     <>
       <Menu />
-      <HowItWork />
+      <HowItWorks />
       <LatestChallenge />
     </>
   );

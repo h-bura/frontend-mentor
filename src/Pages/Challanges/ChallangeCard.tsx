@@ -34,7 +34,7 @@ const LEVEL_COLORS = [
   "rgb(244, 137, 37)",
 ];
 
-function NewChallangeCard({
+function ChallangeCard({
   image,
   price,
   title,
@@ -145,4 +145,4 @@ function NewChallangeCard({
   );
 }
 
-export default NewChallangeCard;
+export default ChallangeCard;
