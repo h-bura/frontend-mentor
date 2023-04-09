@@ -1,9 +1,9 @@
-import { Button, Center, Flex } from "@chakra-ui/react";
+import { Center, Flex } from "@chakra-ui/react";
 import React from "react";
-import FilterSection from "./FilterSection";
 import { useState } from "react";
 import getSortedData, { Difficulty, Filters } from "./Utils";
-import ChallangeCard from "./ChallangeCard";
+import ChallangeCard from "../../components/LatestChallanges/ChallangeCard";
+import FilterSection from "./FilterSection/FilterSection";
 function Challanges() {
   const [sortMethod, setSortMethod] = useState<Difficulty>("normal");
   const [sortFilters, setSortFilters] = useState<Filters>({
@@ -34,18 +34,6 @@ function Challanges() {
             />
           ))}
         </Flex>
-      </Center>
-      <Center mt="40px">
-        <Button
-          textAlign="center"
-          textDecoration="underline red"
-          fontSize="17px"
-          bg="white"
-          _hover={{ textDecoration: "none" }}
-          mt="10px"
-        >
-          View all challenges
-        </Button>
       </Center>
     </>
   );

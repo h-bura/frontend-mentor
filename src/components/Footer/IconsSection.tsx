@@ -2,11 +2,11 @@ import { Box, Flex, Spacer, Icon } from "@chakra-ui/react";
 import React from "react";
 import { AiFillLinkedin } from "react-icons/ai";
 import { BsFacebook, BsTwitter } from "react-icons/bs";
-import FmLogo from "../FmLogo";
+import FmLogo from "../../Icons/FmLogo";
 
 function IconsSection() {
   return (
-    <Box mt="190px" mb="50px">
+    <Box mt="180px" mb="50px">
       <Flex>
         <FmLogo />
         <Spacer />

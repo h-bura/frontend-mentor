@@ -14,7 +14,7 @@ import image6 from "../../image/image6.jpg";
 export const CHALLANGES_DATA = [
   {
     image: image1,
-    price: "Premium",
+    price: "PREMIUM",
     title: " Workit landing page",
     techs: ["HTML", "CSS"],
     level: 1,
@@ -23,7 +23,7 @@ export const CHALLANGES_DATA = [
   },
   {
     image: image2,
-    price: "Free",
+    price: "FREE",
     title: "  Results summary component",
     techs: ["HTML", "CSS"],
     level: 1,
@@ -32,7 +32,7 @@ export const CHALLANGES_DATA = [
   },
   {
     image: image3,
-    price: "Premium",
+    price: "PREMIUM",
     title: "  Dictionary web app",
     techs: ["HTML", "CSS", "JS", "API"],
     level: 3,
@@ -41,7 +41,7 @@ export const CHALLANGES_DATA = [
   },
   {
     image: image4,
-    price: "Free",
+    price: "FREE",
     title: "  Multi-step form",
     techs: ["HTML", "CSS", "JS"],
     level: 4,
@@ -50,7 +50,7 @@ export const CHALLANGES_DATA = [
   },
   {
     image: image5,
-    price: "Premium",
+    price: "PREMIUM",
     title: "  Single-page developer portfolio",
     techs: ["HTML", "CSS", "JS"],
     level: 2,
@@ -59,7 +59,7 @@ export const CHALLANGES_DATA = [
   },
   {
     image: image6,
-    price: "Free",
+    price: "FREE",
     title: "  News homepage",
     techs: ["HTML", "CSS", "JS"],
     level: 2,

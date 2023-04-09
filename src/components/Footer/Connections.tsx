@@ -1,4 +1,4 @@
-import { Flex, Link, Spacer, Text } from "@chakra-ui/react";
+import { Flex, Link, Text } from "@chakra-ui/react";
 import React from "react";
 const FOOTERS = [
   {

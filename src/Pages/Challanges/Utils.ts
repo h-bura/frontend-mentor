@@ -1,12 +1,12 @@
-import { CHALLANGE_DATA } from "./ChallangeData";
-import { DIFFICULTY_TYPES } from "./FilterSection";
+import { ALL_CHALLANGES_DATA } from "./AllChallangeData";
+import { DIFFICULTY_TYPES } from "./FilterSection/DataSection";
 export type Difficulty = "easy" | "hard" | "normal";
 export type Filters = {
   type: string[];
   difficulty: string[];
   languages: string[];
 };
-const CLONED_ARRAY = [...CHALLANGE_DATA];
+const CLONED_ARRAY = [...ALL_CHALLANGES_DATA];
 
 const getSortedData = (difficulty: Difficulty, filters: Filters) => {
   const filterByArg = (item: {
@@ -38,9 +38,9 @@ const getSortedData = (difficulty: Difficulty, filters: Filters) => {
     );
   }
   if (difficulty === "normal") {
-    return CHALLANGE_DATA.filter(filterByArg);
+    return ALL_CHALLANGES_DATA.filter(filterByArg);
   }
 
-  return CHALLANGE_DATA;
+  return ALL_CHALLANGES_DATA;
 };
 export default getSortedData;

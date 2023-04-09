@@ -1,7 +1,7 @@
 import React from "react";
 import { Flex, Spacer, Text, HStack, Divider, Button } from "@chakra-ui/react";
-import FmLogo from "../FmLogo";
-import GitHub from "../GitHub";
+import FmLogo from "../../Icons/FmLogo";
+import GitHub from "../../Icons/GitHub";
 import { Link } from "react-router-dom";
 const HEADER_ITEMS = [
   {
@@ -21,7 +21,9 @@ function Navbar() {
   return (
     <>
       <Flex p="10px">
-        <FmLogo />
+        <Link to="/">
+          <FmLogo />
+        </Link>
         <Spacer />
         <HStack fontWeight="bold" spacing="20px" fontSize="13px">
           {HEADER_ITEMS.map((item) => (

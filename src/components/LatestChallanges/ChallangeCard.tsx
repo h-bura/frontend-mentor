@@ -11,8 +11,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import React from "react";
-import { DIFFICULTY_TYPES } from "./FilterSection";
-
+import { DIFFICULTY_TYPES } from "../../Pages/Challanges/FilterSection/DataSection";
 type CardProps = {
   image: any;
   price: string;

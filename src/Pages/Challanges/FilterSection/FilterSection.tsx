@@ -16,17 +16,12 @@ import {
 } from "@chakra-ui/react";
 import { useState } from "react";
 import { SlArrowDown, SlArrowUp } from "react-icons/sl";
-import { Difficulty, Filters } from "./Utils";
-import LearnAbout from "./LearnAbout";
-const PRICE_TYPES = ["FREE", "FREE+", "PREMIUM"];
-export const DIFFICULTY_TYPES = [
-  "NEWBİE",
-  "JUNIOR",
-  "INTERMEDIATE",
-  "ADVANCED",
-  "GURU",
-];
-const LANGUAGE_TYPES = ["CSS", "JS", "API"];
+import { Difficulty, Filters } from "../Utils";
+import LearnAbout from "../LearnAbout";
+import { DIFFICULTY_TYPES, LANGUAGE_TYPES, PRICE_TYPES } from "./DataSection";
+import SortByMenu from "./SortByMenu";
+import FilterByMenu from "./FilterByMenu";
+import CloseButtonMenu from "./CloseButtonMenu";
 type FilterSectionProps = {
   setSortMethod: React.Dispatch<React.SetStateAction<Difficulty>>;
   setSortFilters: React.Dispatch<React.SetStateAction<Filters>>;
@@ -177,6 +172,16 @@ function FilterSection({
               </MenuList>
             </Menu>
           </Flex>
+          {/*}  <SortByMenu
+            buttonClickSort={buttonClickSort}
+            setButtonClickSort={setButtonClickSort}
+            setSortMethod={setSortMethod}
+            setButtonClickFilter={setButtonClickFilter}
+            priceHandler={priceHandler}
+            difficultyHandler={difficultyHandler}
+            languageHandler={languageHandler}
+            sortFilters={sortFilters}
+        />*/}
           <Flex>
             <Menu>
               <MenuButton
@@ -316,6 +321,15 @@ function FilterSection({
               </MenuList>
             </Menu>
           </Flex>
+          {/*  <FilterByMenu
+          languageHandler={languageHandler}
+           buttonClickFilter={buttonClickFilter}
+          setButtonClickSort={setButtonClickSort}
+           setButtonClickFilter={setButtonClickFilter}
+           priceHandler={priceHandler}
+         difficultyHandler={difficultyHandler}
+          sortFilters={sortFilters}
+                    />*/}
         </Flex>
       </Flex>
 
@@ -383,6 +397,12 @@ function FilterSection({
         <Spacer />
         <LearnAbout />
       </Box>
+      {/* <CloseButtonMenu
+        sortFilters={sortFilters}
+        priceHandler={priceHandler}
+        difficultyHandler={difficultyHandler}
+        languageHandler={languageHandler}
+      />*/}
     </>
   );
 }

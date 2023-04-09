@@ -1,8 +1,8 @@
 import { Box, Button, Center, Flex, Text } from "@chakra-ui/react";
 import React from "react";
 
-import ChallangeCard from "./ChallangeCard";
-import { CHALLANGE_DATA } from "./ChallangeData";
+import ChallangeCard from "../../components/LatestChallanges/ChallangeCard";
+import { ALL_CHALLANGES_DATA } from "./AllChallangeData";
 
 function NewLatestChallenge() {
   return (
@@ -25,7 +25,7 @@ function NewLatestChallenge() {
           mt="-225px"
           mx="30px"
         >
-          {CHALLANGE_DATA.map((item) => (
+          {ALL_CHALLANGES_DATA.map((item) => (
             <ChallangeCard
               image={item.image}
               title={item.title}
