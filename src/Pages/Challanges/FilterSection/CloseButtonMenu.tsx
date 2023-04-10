@@ -2,13 +2,19 @@ import { Box, CloseButton, Spacer, Text } from "@chakra-ui/react";
 import React from "react";
 import LearnAbout from "../LearnAbout";
 import { Filters } from "../Utils";
+type CardProps = {
+  sortFilters: Filters;
+  priceHandler: (item: string) => void;
+  difficultyHandler: (item: string) => void;
+  languageHandler: (item: string) => void;
+};
 
-function CloseButtonMenu(
-  sortFilters: Filters,
-  priceHandler: (item: string) => void,
-  difficultyHandler: (item: string) => void,
-  languageHandler: (item: string) => void
-) {
+function CloseButtonMenu({
+  sortFilters,
+  priceHandler,
+  difficultyHandler,
+  languageHandler,
+}: CardProps) {
   return (
     <Box pr="60px" h="30px" display="flex" mt="15px">
       {sortFilters.type.map((item) => (

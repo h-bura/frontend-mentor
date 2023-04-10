@@ -14,16 +14,25 @@ import React from "react";
 import { SlArrowDown, SlArrowUp } from "react-icons/sl";
 import { Filters } from "../Utils";
 import { DIFFICULTY_TYPES, LANGUAGE_TYPES, PRICE_TYPES } from "./DataSection";
+type CardProps = {
+  setButtonClickFilter: React.Dispatch<React.SetStateAction<boolean>>;
+  setButtonClickSort: React.Dispatch<React.SetStateAction<boolean>>;
+  buttonClickFilter: Boolean;
+  priceHandler: (item: string) => void;
+  difficultyHandler: (item: string) => void;
+  sortFilters: Filters;
+  languageHandler: (item: string) => void;
+};
 
-function FilterByMenu(
-  setButtonClickFilter: React.Dispatch<React.SetStateAction<boolean>>,
-  setButtonClickSort: React.Dispatch<React.SetStateAction<boolean>>,
-  buttonClickFilter: Boolean,
-  priceHandler: (item: string) => void,
-  difficultyHandler: (item: string) => void,
-  sortFilters: Filters,
-  languageHandler: (item: string) => void
-) {
+function FilterByMenu({
+  setButtonClickFilter,
+  setButtonClickSort,
+  buttonClickFilter,
+  priceHandler,
+  difficultyHandler,
+  sortFilters,
+  languageHandler,
+}: CardProps) {
   return (
     <Flex>
       <Menu>

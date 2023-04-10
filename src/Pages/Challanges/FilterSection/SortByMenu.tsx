@@ -9,13 +9,19 @@ import {
 } from "@chakra-ui/react";
 import { SlArrowDown, SlArrowUp } from "react-icons/sl";
 import { Difficulty } from "../Utils";
+type CardProps = {
+  buttonClickSort: boolean;
+  setButtonClickSort: React.Dispatch<React.SetStateAction<boolean>>;
+  setSortMethod: React.Dispatch<React.SetStateAction<Difficulty>>;
+  setButtonClickFilter: React.Dispatch<React.SetStateAction<boolean>>;
+};
 
-function SortByMenu(
-  buttonClickSort: Boolean,
-  setButtonClickSort: React.Dispatch<React.SetStateAction<boolean>>,
-  setSortMethod: React.Dispatch<React.SetStateAction<Difficulty>>,
-  setButtonClickFilter: React.Dispatch<React.SetStateAction<boolean>>
-) {
+function SortByMenu({
+  buttonClickSort,
+  setButtonClickSort,
+  setSortMethod,
+  setButtonClickFilter,
+}: CardProps) {
   return (
     <Flex
       borderLeft="1px solid rgb(219, 229, 230)"
