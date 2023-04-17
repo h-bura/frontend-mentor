@@ -6,17 +6,19 @@ import {
   Image,
   Input,
   Text,
+  useMediaQuery,
 } from "@chakra-ui/react";
 import React from "react";
 import SlackImage from "../../image/logo-slack.svg";
 function Slack() {
+  const [isLargerThan840] = useMediaQuery(["(min-width: 840px)"]);
   return (
     <Box
       mt="165px"
       mx="70px"
       bgColor="#5161B0"
       color="white"
-      h="620px"
+      minH="620px"
       borderRadius="15px"
     >
       <Center>
@@ -35,28 +37,39 @@ function Slack() {
         Join over 180.000 people taking the challenges, talking about their
         code, helping each other, and chatting about all things front-end!
       </Text>
-      <Center mt="50px" px="60px">
-        <Input
-          fontSize="17px"
-          color="grey"
-          w="600px"
-          bgColor="white"
-          h="50px"
-          placeholder="email@example.com"
-        />
-        <Button
-          fontSize="18px"
-          ml="30px"
-          bgColor="white"
-          color="blue.600"
-          h="50px"
-          borderLeftRadius="full"
-          borderRightRadius="full"
-          textAlign="center"
-          w="250px"
-        >
-          REQUEST INVITE
-        </Button>
+      <Center
+        mt="35px"
+        px="60px"
+        display="flex"
+        flexDirection={isLargerThan840 ? "row" : "column"}
+      >
+        <Box>
+          <Input
+            mt="15px"
+            fontSize="17px"
+            color="grey"
+            w={isLargerThan840 ? "30vw" : "300px"}
+            bgColor="white"
+            h="50px"
+            placeholder="email@example.com"
+          />
+        </Box>
+        <Box>
+          <Button
+            fontSize="18px"
+            ml="30px"
+            mt="15px"
+            bgColor="white"
+            color="blue.600"
+            h="50px"
+            borderLeftRadius="full"
+            borderRightRadius="full"
+            textAlign="center"
+            w="250px"
+          >
+            REQUEST INVITE
+          </Button>
+        </Box>
       </Center>
     </Box>
   );

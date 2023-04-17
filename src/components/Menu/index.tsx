@@ -1,8 +1,9 @@
-import { Button, Flex, Image, Text } from "@chakra-ui/react";
+import { Button, Flex, Image, Text, useMediaQuery } from "@chakra-ui/react";
 import React from "react";
 import image from "../../image/homepage-hero.webp";
 import GitHub from "../../Icons/GitHub";
 function Menu() {
+  const [isLargerThan1040] = useMediaQuery(["(min-width: 1040px)"]);
   return (
     <Flex mt="90px" mx="25px">
       <Flex direction="column" width="100%" alignItems="flex-start" mr="20px">
@@ -36,7 +37,11 @@ function Menu() {
         </Button>
       </Flex>
 
-      <Flex w="100%" h="100%" alignSelf="center">
+      <Flex
+        w="100vw"
+        alignSelf="center"
+        display={isLargerThan1040 ? "" : "none"}
+      >
         <Image src={image} />
       </Flex>
     </Flex>

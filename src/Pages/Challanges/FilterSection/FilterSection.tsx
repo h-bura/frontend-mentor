@@ -89,7 +89,7 @@ function FilterSection({
           </Text>
         </Flex>
         <Spacer />
-        <Flex pr="30px">
+        <Flex pr="30px" zIndex="2">
           <SortByMenu
             buttonClickSort={buttonClickSort}
             setButtonClickSort={setButtonClickSort}

@@ -9,6 +9,7 @@ import {
   Spacer,
   Stack,
   Text,
+  useMediaQuery,
 } from "@chakra-ui/react";
 import React from "react";
 import { DIFFICULTY_TYPES } from "../../Pages/Challanges/FilterSection/DataSection";
@@ -41,25 +42,35 @@ function ChallangeCard({
   level,
   description,
 }: CardProps) {
+  const [isLargerThan1640, isLargerThan1310] = useMediaQuery([
+    "(min-width: 1640px)",
+    "(min-width: 1310px)",
+  ]);
   return (
     <>
-      <Card w="280px" h="530px" mt="20px">
-        <CardBody>
-          <Image
-            w="240px"
-            h="175.83px"
-            src={image}
-            borderRadius="lg"
-            _hover={{ cursor: "pointer" }}
-          />
+      <Card
+        width={isLargerThan1640 ? "380px" : "300px"}
+        height="530px"
+        marginTop="20px"
+        // style={
+        //   isLargerThan1600
+        //     ? { width: "370px", height: "530px", marginTop: "20px" }
+        //     : { width: "309px", height: "530px", marginTop: "20px" }
+        // }
+        marginX={isLargerThan1310 ? "" : "5px"}
+      >
+        <Flex
+          justifyContent="flex-end"
+          position="relative"
+          top="20px"
+          right="15px"
+          zIndex="1"
+        >
           <Text
             display="inline-flex"
-            position="relative"
-            bottom="180px"
-            left="160px"
-            color={price === "Free" ? "rgb(62, 84, 163)" : "white"}
+            color={price === "FREE" ? "rgb(62, 84, 163)" : "white"}
             backgroundColor={
-              price === "Free" ? "rgb(231, 235, 249)" : "rgb(62, 84, 163)"
+              price === "FREE" ? "rgb(231, 235, 249)" : "rgb(62, 84, 163)"
             }
             borderRadius="5rem"
             fontSize="15px"
@@ -71,6 +82,16 @@ function ChallangeCard({
           >
             {price}
           </Text>
+        </Flex>
+        <CardBody position="absolute">
+          <Image
+            w="100%"
+            h="175.83px"
+            src={image}
+            borderRadius="lg"
+            _hover={{ cursor: "pointer" }}
+          />
+
           <Stack>
             <Heading
               fontSize="27px"

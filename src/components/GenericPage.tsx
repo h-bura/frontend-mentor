@@ -1,11 +1,8 @@
-import { Box } from "@chakra-ui/react";
+import { Box, useMediaQuery } from "@chakra-ui/react";
 
 function GenericPage({ page }: { page: React.ReactNode }) {
-  return (
-    <Box marginX="15%" border="1px solid red">
-      {page}
-    </Box>
-  );
+  const [isLargerThan1315] = useMediaQuery("(min-width: 1310px)");
+  return <Box marginX={isLargerThan1315 ? "12%" : ""}>{page}</Box>;
 }
 
 export default GenericPage;

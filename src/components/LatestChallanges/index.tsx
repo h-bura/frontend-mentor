@@ -1,13 +1,24 @@
-import { Box, Button, Center, Flex, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Center,
+  Flex,
+  Text,
+  useMediaQuery,
+} from "@chakra-ui/react";
 import React from "react";
 import ChallangeCard from "./ChallangeCard";
 import { CHALLANGES_DATA } from "./ChallangesData";
 
 function LatestChallenge() {
+  const [isLargerThan697, isLargerThan1310] = useMediaQuery([
+    "(min-width: 697px)",
+    "(min-width: 1310px)",
+  ]);
   return (
     <>
       <Box
-        height="350px"
+        height={isLargerThan697 ? "350px" : "700px"}
         bg="rgb(62, 84, 163 )"
         mt="90px"
         mx="30px"
@@ -21,7 +32,7 @@ function LatestChallenge() {
         <Flex
           flexWrap="wrap"
           justifyContent="space-evenly"
-          mt="-225px"
+          mt={isLargerThan697 ? "-225px" : "-600px"}
           mx="30px"
         >
           {CHALLANGES_DATA.map((item, index) => (
