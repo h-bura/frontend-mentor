@@ -38,17 +38,17 @@ function Slack() {
         code, helping each other, and chatting about all things front-end!
       </Text>
       <Center
-        mt="35px"
+        mt="50px"
         px="60px"
         display="flex"
         flexDirection={isLargerThan840 ? "row" : "column"}
       >
         <Box>
           <Input
-            mt="15px"
+            mb="15px"
             fontSize="17px"
             color="grey"
-            w={isLargerThan840 ? "30vw" : "300px"}
+            w={isLargerThan840 ? "30vw" : "70vw"}
             bgColor="white"
             h="50px"
             placeholder="email@example.com"
@@ -58,7 +58,7 @@ function Slack() {
           <Button
             fontSize="18px"
             ml="30px"
-            mt="15px"
+            mb="15px"
             bgColor="white"
             color="blue.600"
             h="50px"

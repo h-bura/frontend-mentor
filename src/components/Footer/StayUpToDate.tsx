@@ -3,11 +3,11 @@ import React from "react";
 
 function StayUpToDate() {
   return (
-    <Flex flexDirection="column" w="600px" mr="40px">
+    <Flex flexDirection="column">
       <Text fontSize="30px" fontWeight="bold" color="rgb(62, 84, 163)">
         Stay up to date
       </Text>
-      <Text pt="15px" fontSize="18px" w="400px" pr="15px">
+      <Text pt="15px" fontSize="18px" w="70%" pr="15px">
         with new challenges, featured solutions, selected articles and our
         latest news
       </Text>
@@ -15,13 +15,13 @@ function StayUpToDate() {
         <Input
           placeholder="email@example.com"
           border="0.5px solid rgb(219, 229, 230)"
-          w="230px"
+          w="60%"
           h="40px"
           type="email"
           fontSize="20px"
         />
         <Button
-          w="150px"
+          w="30%"
           h="50px"
           bgColor="red"
           borderLeftRadius="full"

@@ -52,11 +52,6 @@ function ChallangeCard({
         width={isLargerThan1640 ? "380px" : "300px"}
         height="530px"
         marginTop="20px"
-        // style={
-        //   isLargerThan1600
-        //     ? { width: "370px", height: "530px", marginTop: "20px" }
-        //     : { width: "309px", height: "530px", marginTop: "20px" }
-        // }
         marginX={isLargerThan1310 ? "" : "5px"}
       >
         <Flex

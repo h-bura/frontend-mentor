@@ -57,7 +57,7 @@ function Navbar() {
         <Box display={!menuOpen ? "none" : ""}>
           <Divider />
           {HEADER_ITEMS.map((item) => (
-            <Box>
+            <Box onClick={() => setMenuOpen(!menuOpen)}>
               <Link key={item.link} to={item.link}>
                 <Flex py="20px">
                   <Box>
@@ -79,7 +79,7 @@ function Navbar() {
               <Divider />
             </Box>
           ))}
-          <Flex py="20px">
+          <Flex py="20px" onClick={() => setMenuOpen(!menuOpen)}>
             {" "}
             <FiUnlock size="22px" />
             <Text
@@ -124,7 +124,7 @@ function Navbar() {
       </Box>
 
       <Flex p="10px">
-        <Box display={isLargerThan1020 ? "" : "none"}>
+        <Box display={isLargerThan1020 ? "flex" : "none"}>
           <Link to="/">
             <FmLogo />
           </Link>

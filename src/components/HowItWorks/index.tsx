@@ -4,10 +4,7 @@ import ItemCard from "./ItemCard";
 import { ITEMS } from "./HowItWorksData";
 
 function HowItWorks() {
-  const [isLargerThan800, isLargerThan780] = useMediaQuery([
-    "(min-width: 800px)",
-    "(min-width: 780px)",
-  ]);
+  const [isLargerThan800] = useMediaQuery("(min-width: 800px)");
   return (
     <>
       <VStack mt="150px" mx="30px">

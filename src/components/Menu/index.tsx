@@ -3,10 +3,15 @@ import React from "react";
 import image from "../../image/homepage-hero.webp";
 import GitHub from "../../Icons/GitHub";
 function Menu() {
-  const [isLargerThan1040] = useMediaQuery(["(min-width: 1040px)"]);
+  const [isLargerThan1040] = useMediaQuery("(min-width: 1040px)");
   return (
-    <Flex mt="90px" mx="25px">
-      <Flex direction="column" width="100%" alignItems="flex-start" mr="20px">
+    <Flex mt="90px" mx="50px">
+      <Flex
+        flexDirection="column"
+        width="100%"
+        alignItems="flex-start"
+        pl={isLargerThan1040 ? "30px" : "0px"}
+      >
         <Text
           fontSize="50px"
           color=" rgb(62, 84, 163)"
@@ -38,11 +43,11 @@ function Menu() {
       </Flex>
 
       <Flex
-        w="100vw"
-        alignSelf="center"
-        display={isLargerThan1040 ? "" : "none"}
+        w="100%"
+        justifyContent="center"
+        display={isLargerThan1040 ? "flex" : "none"}
       >
-        <Image src={image} />
+        <Image display="inline" w="480px" h="415px" src={image} />
       </Flex>
     </Flex>
   );

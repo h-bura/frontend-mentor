@@ -11,10 +11,7 @@ import ChallangeCard from "./ChallangeCard";
 import { CHALLANGES_DATA } from "./ChallangesData";
 
 function LatestChallenge() {
-  const [isLargerThan697, isLargerThan1310] = useMediaQuery([
-    "(min-width: 697px)",
-    "(min-width: 1310px)",
-  ]);
+  const [isLargerThan697] = useMediaQuery("(min-width: 697px)");
   return (
     <>
       <Box

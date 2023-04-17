@@ -20,14 +20,16 @@ const FOOTERS = [
 ];
 function Connections() {
   return (
-    <Flex gap="10px" w="800px" justifyContent="flex-end">
+    <Flex gap="20px" w="100%" justifyContent="space-between" flexWrap="wrap">
       {FOOTERS.map((footer, index) => (
         <Flex key={index} flexDirection="column">
           <Text
+            w="auto"
             fontSize="14px"
             fontWeight="bold"
             fontFamily="Heebo, sans-serif;"
             letterSpacing="1px"
+            white-space="nowrap"
           >
             {footer.title}
           </Text>
