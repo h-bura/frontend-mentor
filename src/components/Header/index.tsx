@@ -5,7 +5,7 @@ function Header() {
   return (
     <HStack
       bg="rgb(62, 84, 163)"
-      color="white"
+      color="#fff"
       p="12px"
       display="flex"
       fontSize="17px"
